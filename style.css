@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+header {
+    background-color: #212121;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #4CAF50;
+}
+
+header .logo h1 {
+    font-family: 'Orbitron', sans-serif; /* Fonte futurista */
+    font-size: 60px; /* Tamanho grande para o nome */
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    letter-spacing: 5px; /* Aumenta o espaçamento entre as letras */
+    background: linear-gradient(to right, #00ff00, #32cd32); /* Gradiente de verde */
+    -webkit-background-clip: text; /* Faz o gradiente aparecer no texto */
+    color: transparent; /* Torna o fundo do texto transparente para o gradiente aparecer */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+    animation: glow 1.5s ease-in-out infinite alternate; /* Efeito de brilho */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.7);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(50, 205, 50, 1), 0 0 30px rgba(50, 205, 50, 0.9);
+    }
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px;
+    background-color: #333;
+    min-height: 70vh;
+}
+
+#funcionalidades h2,
+#sobre h2,
+#contato h2 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card {
+    background-color: #444;
+    width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 5px solid #4CAF50; /* Detalhe visual */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card .icon {
+    font-size: 40px;
+    color: #FFD700; /* Cor vibrante para destaque */
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+#sobre p,
+#contato p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+footer {
+    background-color: #212121;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+a {
+    color: #4CAF50;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
